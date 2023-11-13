@@ -23,12 +23,11 @@ exports.signin = (req, res) => {
     .then((user) => {
       if (!user) {
         return res.status(400).json({
-          error: "User with that mail does not exisit, Please signup",
+          error: "User with that mail does not exsist, Please signup",
         });
       }
 
       //email password match.
-
       //create authenticate method in user.
 
       if (!user.authenticate(password)) {

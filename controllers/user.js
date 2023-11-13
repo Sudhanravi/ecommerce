@@ -13,11 +13,6 @@ exports.userById = (req, res, next, id) => {
       req.profile = user;
       next();
     })
-    .catch((err) => {
-      return res.status(500).json({
-        error: "Internal server error",
-      });
-    });
 };
 
 // exports.userById = (req, res, next, id) => {
